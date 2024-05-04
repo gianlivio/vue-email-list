@@ -1,16 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
-    <!-- axios -->
+    <div id="app">
+        <ul v-if="caricato">
+            <li v-for="email in emails" :key="email">{{ email }}</li>
+        </ul>
+        <p v-else>Caricamento in corso...</p>
+    </div>
+    <!-- Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- js -->
+    
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- JavaScript -->
     <script src="./js/script.js"></script>
 </body>
 </html>
